@@ -34,7 +34,7 @@ class Clock extends Component {
   }
   render() {
     return (
-      <div className="texte">
+      <div className="texte content">
           <h1>
           {this.leading0(this.state.days)} Jours &nbsp;
           {this.leading0(this.state.hours)} Heures &nbsp;

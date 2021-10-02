@@ -1,86 +1,123 @@
 .app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   overflow-y: hidden;
   overflow-x: hidden;
 }
 
-.baneer {
+.banner {
   width: 100%;
-  filter: blur(7px);
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url("/src/img/banner.jpeg");
+  filter: blur(7px) brightness(110%);
   transition-property: -webkit-filter;
   transition-duration: .5s;
 }
-.baneer:hover, .baneer:focus {
+
+.banner:hover, .banner:focus {
   filter: blur(5px);
 }
 
-.texte {
+.logo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Jomhuria-Regular","Jomhuria";
+  top: calc(50% - 325px);
+  left: calc(50% - 185px);
+  height: 650px;
+  width: 370px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: center center;
+  background-image: url("/src/img/genius-logo.svg");
+  filter: blur(5px);
+}
+
+.main, .main * {
+  z-index: 3;
+}
+
+.main {
+  min-width: 600px;
+  padding: 15px 30px;
+  background-color: #FFFFFF70;
+  border-radius: 5px;
+}
+
+.texte {
+  font-family: "Jomhuria-Regular", "Jomhuria", serif;
   text-shadow: 1px 1px 2px #f5a00f, 0 0 1em #3BAB3E, 0 0 0.2em #3BAB3E;
 }
-a:hover {
-	opacity: 1;
-	-webkit-animation: flash 1.5s;
-	animation: flash 1.5s;
+
+.colonne {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 20px 0;
 }
+
+a:hover {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+
 @-webkit-keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
 .Attends {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Jomhuria-Regular","Jomhuria";
+  font-family: "Jomhuria-Regular", "Jomhuria", serif;
 }
 
-.FB {
-  position: absolute;
-  top: 70%;
-  left: 35%;
-  transform: translate(-70%, -40%);
-  width: 80px;
-  height: 80px;
-}
-.TW {
-  position: absolute;
-  top: 70%;
-  left: 45%;
-  transform: translate(-70%, -40%);
-  width: 80px;
-  height: 80px;
-}
-.PI {
-  position: absolute;
-  top: 70%;
-  left: 55%;
-  transform: translate(-70%, -40%);
-  width: 80px;
-  height: 80px;
-}
-.IN {
-  position: absolute;
-  top: 70%;
-  left: 65%;
-  transform: translate(-70%, -40%);
-  width: 80px;
-  height: 80px;
+.social > img {
+  margin: 0 20px;
+  width: 70px;
+  height: 70px;
 }
 
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 280px;
+    height: 480px;
+    top: calc(50% - 240px);
+    left: calc(50% - 140px);
+    background-size: 300px;
+  }
 
+  .main {
+    min-width: 100%;
+  }
+
+  .social > img {
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+  }
+}
