@@ -42,13 +42,19 @@ class Clock extends Component {
 
   render() {
     return (
-      <div className="counter texte content">
-        <h1>
-          {this.leading0(this.state.days)} Jours &nbsp;
-          {this.leading0(this.state.hours)} Heures &nbsp;
-          {this.leading0(this.state.minutes)} Minutes &nbsp;
-          {this.leading0(this.state.seconds)} Secondes &nbsp;
-        </h1>
+      <div className="counter texte">
+        <div className="time-container">
+          <span className="value">{this.leading0(this.state.days)}</span><span className="unit">Jours</span>
+        </div>
+        <div className="time-container">
+          <span className="value">{this.leading0(this.state.hours)}</span><span className="unit">Heures</span>
+        </div>
+        <div className="time-container">
+          <span className="value">{this.leading0(this.state.minutes)}</span><span className="unit">Min</span>
+        </div>
+        <div className="time-container">
+          <span className="value">{this.leading0(this.state.seconds)}</span><span className="unit">Sec</span>
+        </div>
       </div>
     );
   }
