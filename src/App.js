@@ -1,10 +1,10 @@
 import React from "react";
 import './App.css';
-import Count from "./Count";
 import FB from './img/facebook.png';
 import TW from './img/twitter.png';
 import PI from './img/pinterest.png';
 import IN from './img/instagram.png';
+import Clock from "./Clock";
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <div className="logo"/>
       <div className="banner"/>
       <div className="main">
-        <Count/>
+        <Clock/>
         <h2 className="Attends">En attendant rejoins le guide sur les réseaux</h2>
         <div className="zoom colonne">
           <a className="social" href="https://www.facebook.com/geniuscbd">
