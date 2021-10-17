@@ -5,6 +5,7 @@ import TW from './img/twitter.png';
 import PI from './img/pinterest.png';
 import IN from './img/instagram.png';
 import Clock from "./Clock";
+import {MailchimpForm} from "./MailchimpForm";
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <div className="banner"/>
       <div className="main">
         <Clock/>
-        <h2 className="Attends">En attendant rejoins le guide sur les réseaux</h2>
+        <h2 className="section-title">En attendant rejoins le guide sur les réseaux</h2>
         <div className="zoom colonne">
           <a className="social" href="https://www.facebook.com/geniuscbd">
             <img src={FB} className="FB" alt="FB"/>
@@ -29,6 +30,7 @@ function App() {
             <img src={IN} className="IN" alt="IN"/>
           </a>
         </div>
+        <MailchimpForm/>
       </div>
     </div>
   );
