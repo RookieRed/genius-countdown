@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './App.css';
 
-const deadline = "2021-10-30 21:30:00"
+const deadline = "2021-10-30 20:00:00"
 
 class Clock extends Component {
   constructor(props) {

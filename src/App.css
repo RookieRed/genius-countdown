@@ -193,13 +193,20 @@ a:hover {
   height: 45px;
 }
 
+@media only screen and (max-width: 1104px) {
+  #mc_embed_signup input.email {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
 button.submit {
   min-height: 45px;
-  background-color: #3BAB3E;
+  background-color: white;
   border-radius: 0 11px;
   border: 2px solid #3BAB3E;
   box-sizing: border-box;
-  color: white;
+  color: #3BAB3E;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -212,6 +219,11 @@ button.submit {
   text-decoration: none;
 }
 
+label {
+  letter-spacing: 0;
+  font-weight: normal;
+}
+
 button.submit:disabled {
   background-color: #eeeeee;
   border-color: #eeeeee;
@@ -219,8 +231,8 @@ button.submit:disabled {
   cursor: default;
 }
 
-button.submit:hover {
-  background-color: white;
-  color: #3BAB3E;
+button.submit:not(:disabled):hover {
+  background-color: #3BAB3E;
+  color: white;
   transition-duration: 0.1s;
 }

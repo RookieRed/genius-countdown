@@ -5,7 +5,7 @@ export function MailchimpForm() {
   const [submitDisabled, setSubmitDisabled] = useState(true)
   return <React.Fragment>
     <div id="mc_embed_signup">
-      <h2 className="section-title no-margin">Inscris-toi à la newsletter</h2>
+      <h2 className="section-title no-margin">Et inscris-toi à la newsletter</h2>
       <form action="https://genius-cbd.us5.list-manage.com/subscribe/post?u=5f64f288c4941af07c9f8bb26&amp;id=8a41b6491b"
             method="post"
             id="mc-embedded-subscribe-form"
@@ -14,7 +14,7 @@ export function MailchimpForm() {
             target="_blank"
             noValidate>
         <div id="mc_embed_signup_scroll">
-          <label htmlFor="mce-EMAIL">Suivez l'actu du génie ! 🧞</label>
+          <label htmlFor="mce-EMAIL">Pour ne rien manquer de l'actu du génie! 🧞</label>
           <input type="email"
                  onChange={(e) => {
                    setEmail(e.target.value)
